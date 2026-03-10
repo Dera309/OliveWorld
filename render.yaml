@@ -1,0 +1,38 @@
+services:
+  # Static Site
+  - type: web
+    name: oliveworld
+    env: static
+    buildCommand: npm run build:production
+    staticPublishPath: ./dist
+    buildFilter:
+      paths:
+        - src/**
+        - public/**
+        - package.json
+        - vite.config.ts
+        - tsconfig.json
+        - tailwind.config.*
+        - components.json
+      ignoredPaths:
+        - node_modules/**
+        - .git/**
+        - docs/**
+        - .junie/**
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: NODE_ENV
+        value: production
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
