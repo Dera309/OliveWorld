@@ -188,7 +188,9 @@ For support and questions:
 
 ## 🌐 Live Demo
 
-[Deploy your site and add the live URL here]
+**🚀 Live Site**: https://oliveworld.onrender.com
+
+Visit the deployed OliveWorld website to see the cleaning services platform in action!
 
 ---
 
