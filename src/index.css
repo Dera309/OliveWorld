@@ -8,10 +8,10 @@
 /* ===== Design Tokens ===== */
 :root {
   /* Brand Colors */
-  --primary: oklch(0.205 0 0);
+  --primary: #4A5D23;
   --primary-dark: #3a4a1b;
   --primary-light: #7a9a3a;
-  --accent: oklch(0.97 0 0);
+  --accent: #D4A843;
   --accent-dark: #b8902f;
 
   /* Olive Neutrals */
@@ -28,7 +28,7 @@
   --olive-950: #171a12;
 
   /* Semantic */
-  --background: oklch(1 0 0);
+  --background: #f7f8f4;
   --foreground: oklch(0.145 0 0);
   --surface: #ffffff;
   --muted: oklch(0.97 0 0);

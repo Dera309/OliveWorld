@@ -168,7 +168,7 @@ export default function ContactSection() {
                   <Label className="font-body text-sm font-medium text-olive-700">
                     Inquiry Type
                   </Label>
-                  <Select onValueChange={v => update('inquiry', v)} value={form.inquiry}>
+                  <Select onValueChange={v => update('inquiry', v ?? '')} value={form.inquiry}>
                     <SelectTrigger className="font-body text-sm rounded-xl border-olive-200 focus:ring-primary/20 text-olive-700">
                       <SelectValue placeholder="Select inquiry type" />
                     </SelectTrigger>

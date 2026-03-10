@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Menu, X, Home } from 'lucide-react'
+import { Menu, Home } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
@@ -12,6 +12,7 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  // open state is managed via Sheet; kept for external close on nav click
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -85,10 +86,15 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger asChild>
-            <button className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-olive-800' : 'text-white'}`}>
-              {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+          <SheetTrigger
+            render={
+              <button
+                aria-label="Open menu"
+                className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-olive-800' : 'text-white'}`}
+              />
+            }
+          >
+            <Menu className="w-6 h-6" />
           </SheetTrigger>
           <SheetContent side="right" className="w-72 bg-white pt-8">
             <div className="flex items-center gap-2.5 mb-8">

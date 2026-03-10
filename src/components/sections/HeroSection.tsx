@@ -82,8 +82,8 @@ export default function HeroSection({ onSearch }: HeroSectionProps) {
             </div>
 
             {/* Location */}
-            <div className="md:w-44">
-              <Select onValueChange={setLocation}>
+            <div className="w-full md:w-44">
+              <Select onValueChange={(v) => setLocation(typeof v === 'string' ? v : '')}>
                 <SelectTrigger className="h-12 bg-white/10 border-white/20 text-white font-body text-sm rounded-xl focus:ring-2 focus:ring-white/30 [&>span]:text-white/60 hover:bg-white/15">
                   <MapPin className="w-4 h-4 mr-1.5 text-white/50 shrink-0" />
                   <SelectValue placeholder="Location" />
@@ -97,8 +97,8 @@ export default function HeroSection({ onSearch }: HeroSectionProps) {
             </div>
 
             {/* Type */}
-            <div className="md:w-40">
-              <Select onValueChange={setType}>
+            <div className="w-full md:w-40">
+              <Select onValueChange={(v) => setType(typeof v === 'string' ? v : '')}>
                 <SelectTrigger className="h-12 bg-white/10 border-white/20 text-white font-body text-sm rounded-xl focus:ring-2 focus:ring-white/30 [&>span]:text-white/60 hover:bg-white/15">
                   <ChevronDown className="w-4 h-4 mr-1.5 text-white/50 shrink-0" />
                   <SelectValue placeholder="Type" />

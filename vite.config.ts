@@ -12,4 +12,15 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'ui-vendor': ['@base-ui/react', 'lucide-react'],
+          'utils-vendor': ['sonner', 'clsx', 'tailwind-merge', 'class-variance-authority'],
+        },
+      },
+    },
+  },
 })
