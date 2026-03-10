@@ -60,7 +60,7 @@ export default function FilterBar({ filters, onFilterChange, resultCount }: Filt
         </div>
 
         {/* Location */}
-        <div className="w-full sm:w-40">
+        <div className="w-40">
           <Select value={filters.location || 'all'} onValueChange={v => update({ location: (v === 'all' || v === null) ? '' : v })}>
             <SelectTrigger className="h-10 font-body text-sm bg-olive-50 border-olive-200 rounded-xl text-olive-700 focus:ring-primary/20">
               <SelectValue placeholder="All Locations" />
@@ -74,7 +74,7 @@ export default function FilterBar({ filters, onFilterChange, resultCount }: Filt
         </div>
 
         {/* Property Type */}
-        <div className="w-full sm:w-36">
+        <div className="w-36">
           <Select value={filters.type || 'all'} onValueChange={v => update({ type: (v === 'all' || v === null) ? '' : v })}>
             <SelectTrigger className="h-10 font-body text-sm bg-olive-50 border-olive-200 rounded-xl text-olive-700 capitalize focus:ring-primary/20">
               <SelectValue placeholder="All Types" />
@@ -88,7 +88,7 @@ export default function FilterBar({ filters, onFilterChange, resultCount }: Filt
         </div>
 
         {/* Bedrooms */}
-        <div className="w-full sm:w-28">
+        <div className="w-28">
           <Select value={filters.bedrooms || 'any'} onValueChange={v => update({ bedrooms: (v === 'any' || v === null) ? '' : v })}>
             <SelectTrigger className="h-10 font-body text-sm bg-olive-50 border-olive-200 rounded-xl text-olive-700 focus:ring-primary/20">
               <SelectValue placeholder="Beds" />

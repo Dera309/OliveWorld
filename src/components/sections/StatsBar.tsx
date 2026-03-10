@@ -15,7 +15,7 @@ export default function StatsBar() {
           {STATS.map(({ Icon, value, label, color }, index) => (
             <div
               key={label}
-              className="flex flex-col items-center text-center group relative"
+              className="flex flex-col items-center text-center group"
             >
               <div className={`w-12 h-12 rounded-xl bg-olive-50 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform ${color}`}>
                 <Icon className={`w-6 h-6 ${color}`} />

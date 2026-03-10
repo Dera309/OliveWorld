@@ -10,8 +10,7 @@ services:
         - src/**
         - public/**
         - package.json
-        - vite.config.ts
-        - tsconfig.json
+        - vite.config.js
         - tailwind.config.*
         - components.json
       ignoredPaths:
